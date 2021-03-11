@@ -1,0 +1,17 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+<div style="height: 500px">
+    <app-chart #chartRef [type]="chartType" 
+              [data]="chartData"
+              [series]="graphs"
+              [axisX] = "categoryAxis"
+              [axisY] = "valueAxis"></app-chart>
+</div>
+<input #inputOne type="text"/>
+<button (click)="changeSeriesOneColor(inputOne.value)">Change Series One Color </button><br>
+<input #inputTwo type="text"/>
+<button (click)="changeSeriesTwoColor(inputTwo.value)">Change Series Two Color </button>
+
+<button (click)="onClickExport()">Export</button>
